@@ -11,10 +11,9 @@
     <%@ include file = "menu.jsp" %>
         </p>
         <p>
-        	bonjour ${ !empty name ? name : ''}
+        	bonjour ${ auteur.prenom } ${ auteur.nom }
         </p>
-        <p>
-        	${noms[1] }
+        <p>${ auteur.actif ? 'Très actif' : 'Not Actif' }
         </p>
     </body>
 </html>
