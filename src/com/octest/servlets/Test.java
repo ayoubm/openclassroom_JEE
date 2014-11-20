@@ -20,8 +20,10 @@ public class Test extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String message = "Au revoir !";
-		request.setAttribute("variable", message);
+		String name = request.getParameter("name");
+		request.setAttribute("name", name);
+		String[] noms = {"Ayoub", "Carole", "John"};
+		request.setAttribute("noms", noms);
 		this.getServletContext().getRequestDispatcher("/WEB-INF/bonjour.jsp").forward(request, response);
 	}
 

@@ -8,19 +8,13 @@
         <title>Test</title>
     </head>
     <body>
-        <p>Bonjour à vous tous !</p>
-        <p>
-        	<%
-        		String variable = (String) request.getAttribute("variable");
-        		out.println(variable);
-        	%>
+    <%@ include file = "menu.jsp" %>
         </p>
         <p>
-        	<%
-        		for (int i = 0; i < 20; i++) {
-        			out.println("Une nouvelle ligne !<br />");
-        		}
-        	%>
+        	bonjour ${ !empty name ? name : ''}
+        </p>
+        <p>
+        	${noms[1] }
         </p>
     </body>
 </html>
